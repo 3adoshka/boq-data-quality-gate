@@ -1,0 +1,6 @@
+item_code,description,unit,quantity,unit_rate
+Pr_20_10,Excavation in trench,m3,1500.5,45.0
+Pr_20_20,,m3,-50.0,120.0
+Pr_30_10,Reinforced concrete foundations,m3,420.0,-350.0
+InvalidCode,Formwork to vertical surfaces,sqm,850.0,65.0
+Pr_40_10,Structural steel framing,ton,120.0,4500.0
