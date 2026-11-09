@@ -55,3 +55,10 @@ def run_boq_validation(csv_path: str):
 if __name__ == "__main__":
     target_file = sys.argv[1] if len(sys.argv) > 1 else "dirty_subcontractor_boq.csv"
     run_boq_validation(target_file)
+def calculate_boq_health_score(total_rows, total_errors):
+    """Calculates a percentage health score for the bill of quantities dataset."""
+    if total_rows <= 0:
+        return 100.0
+    score = max(0.0, ((total_rows - total_errors) / total_rows) * 100.0)
+    print(f"[*] BoQ Data Quality Health Score: {score:.2f}% (Errors: {total_errors}/{total_rows})")
+    return score
